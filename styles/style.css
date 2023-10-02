@@ -1,0 +1,1052 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+  box-sizing:border-box;  
+  margin: 0;
+  padding: 0;
+}
+
+button, summary {
+	cursor: pointer;
+}
+
+
+/*********/
+/* FONTS */
+/*********/
+@font-face {
+	font-family: 'Insignia Roman';
+	src:url("../fonts/Insignia\ Roman.ttf") format("truetype");	
+}
+
+
+
+/****************/
+/* STYLING */
+/****************/
+
+/* Algemene styling */
+
+body{
+	background-color: #111;
+	color: #111;
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2{
+	font-family: Insignia Roman, sans-serif;
+}
+
+h2{
+	text-transform: uppercase;
+	font-size: 1em;
+	margin-bottom: .5em;
+}
+
+h3{
+	font-size: smaller;
+	text-decoration: underline;
+}
+
+p, blockquote{
+	font-size: smaller;
+}
+
+blockquote{
+	font-style: italic;
+}
+
+body main{
+	background-color: white;
+	margin: 0;
+	width: 100%;
+}
+
+
+
+
+/* header styling ******************************************************************************************************/
+
+header{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1{
+	color: white;
+	font-size: clamp(2em, 6vw, 6em);
+	display: flex;
+	gap: .5em;
+}
+
+header div{
+	display: flex;
+}
+
+header p{
+	color: white;
+	font-size: clamp(.8em, 2vw, 3em);
+	writing-mode: vertical-lr;
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	font-family: Insignia Roman, sans-serif;
+}
+
+
+
+/* h1 animatie*********************************************************************** */
+
+h1 span{
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
+h1:hover span, h1 span{
+	animation-duration:5s;
+	animation-direction:alternate;
+}
+
+h1:hover span:nth-of-type(1), h1 span:nth-of-type(1){
+	animation-name: animation-1;
+}
+
+h1:hover span:nth-of-type(2), h1 span:nth-of-type(2){
+	animation-name: animation-2;
+}
+
+h1:hover span:nth-of-type(3), h1 span:nth-of-type(3){
+	animation-name: animation-3;
+}
+
+h1:hover span:nth-of-type(4), h1 span:nth-of-type(4){
+	animation-name: animation-4;
+}
+
+h1:hover span:nth-of-type(5), h1 span:nth-of-type(5){
+	animation-name: animation-5;
+}
+
+h1:hover span:nth-of-type(6), h1 span:nth-of-type(6){
+	animation-name: animation-6;
+}
+
+h1:hover span:nth-of-type(6), h1 span:nth-of-type(7){
+	animation-name: animation-7;
+}
+
+h1:hover span:nth-of-type(6), h1 span:nth-of-type(8){
+	animation-name: animation-8;
+}
+
+
+
+span:nth-of-type(1){
+	animation-delay: 1.4s;
+	color: var(--color-dunkinorange);
+}
+
+span:nth-of-type(2){
+	animation-delay: 1.2s;
+	color: var(--color-dunkinlightbrown);
+}
+
+span:nth-of-type(3){
+	animation-delay: 1s;
+	color: var(--color-dunkinpink);
+}
+
+span:nth-of-type(4){
+	animation-delay: .8s;
+	color: var(--color-dunkinorange);
+}
+
+span:nth-of-type(5){
+	animation-delay: .6s;
+	color: var(--color-dunkinyellow);
+}
+
+span:nth-of-type(6){
+	animation-delay: .4s;
+	color: var(--color-dunkinblue);
+}
+
+span:nth-of-type(7){
+	animation-delay: .2s;
+	color: var(--color-dunkinblue);
+}
+
+span:nth-of-type(8){
+	animation-delay: 0s;
+	color: var(--color-dunkinblue);
+}
+
+
+ 
+  @keyframes animation-1 { 
+	
+	0%{
+		transform: translateY(0);
+		animation-timing-function: ease-in-out;
+	  }
+	  
+
+	18.75%, 20.5%{
+		transform: translateY(2.8em);
+		animation-timing-function: ease-in-out;
+	  }
+
+	
+	37.5%, 50% {
+	  transform:translatey(0);
+	  animation-timing-function: ease-in-out;
+	  background-image: radial-gradient(
+		#4C4394 30% 50%,
+		#B50069 50% 70%, 
+		#9CCD58 70% 100%
+	  );
+
+	  background-size: .5em .7em;
+	  color:transparent;
+	  background-position: 70% 50%;
+	}
+
+	65%, 68% {
+		transform:translatey(-1em);
+		animation-timing-function: ease-in-out;
+	 } 
+
+	85%, 100% {
+		transform:translatey(0);
+		animation-timing-function: ease-in-out;
+	}
+  }
+
+  @keyframes animation-2 { 
+	
+	0%{
+		transform: translateY(0);
+		animation-timing-function: ease-in-out;
+	  }
+	  
+	  
+
+	  18.75%, 20.5%{
+		transform: translateY(2.8em);
+		animation-timing-function: ease-in-out;
+	  }
+
+	
+	  37.5%, 100% {
+		transform:translatey(0);
+		animation-timing-function: ease-in-out;
+
+		background-image: radial-gradient(
+			#717A97 20%, 
+			#E5EB01 20% 80%, 
+			#5260A7 80%
+			);
+        background-size: .5em .5em;
+		/* https://superdesigner.co/tools/css-backgrounds */
+
+		color:transparent;
+	}
+  }
+
+  
+
+  @keyframes animation-3 { 
+	
+	0%{
+		transform: translateY(0);
+		animation-timing-function: ease-in-out;
+	  }
+	  
+
+	  18.75%, 20.5%{
+		transform: translateY(2.8em);
+		animation-timing-function: ease-in-out;
+	  }
+
+	
+	  37.5%, 100% {
+	  transform:translatey(0);
+	  animation-timing-function: ease-in-out;
+	  
+	  background-image: linear-gradient(
+			0.3turn, 
+			transparent 0% 20%, 
+			#9CCD58 20% 25%, 
+			transparent 25% 35%, 
+			#DA0059 35% 40%, 
+			transparent 40% 50%,
+			#9CCD58 50% 55%,
+			transparent 55% 65%,
+			#DA0059 65% 70%,
+			transparent 70% 80%,
+			#9CCD58 80% 85%,
+			transparent 85% 95%,
+			#DA0059 95% 100%
+			);
+        
+		color:transparent;
+	}
+  }
+
+
+  @keyframes animation-4 { 
+	
+	0%{
+		transform: translateY(0);
+		animation-timing-function: ease-in-out;
+	  }
+	  
+
+	  18.75%, 20.5%{
+		transform: translateY(2.8em);
+		animation-timing-function: ease-in-out;
+	  }
+
+	
+	  37.5%, 100% {
+	  transform:translatey(0);
+	  animation-timing-function: ease-in-out;
+
+	  background-image: 
+	  linear-gradient(
+		135deg,
+		transparent 55%,
+		#ED9B00 55%
+	  ),
+	  
+	  radial-gradient(
+			circle at center,
+			#ed9a00 15%,
+			#D6C4AE 15% 25%,
+			#ED9B00 25% 35%,
+			#D6C4AE 35% 45%,
+			#ED9B00 45% 55%,
+			#D6C4AE 55% 65%,
+			#ED9B00 65%
+			);
+        background-size: .7em .7em;
+		/* https://www.youtube.com/watch?v=q7SbKbmTCzg&ab_channel=CodingArtist */
+
+		color:transparent;
+	}
+  }
+
+  
+
+  @keyframes animation-5 { 
+	
+	0%{
+		transform: translateY(0);
+		animation-timing-function: ease-in-out;
+	}
+	  
+
+	18.75%, 20.5%{
+		transform: translateY(2.8em);
+		animation-timing-function: ease-in-out;
+	}
+
+	
+	37.5%, 100% {
+		transform:translatey(0);
+		animation-timing-function: ease-in-out;
+        background-size: cover;
+        background-color: #73C4C7;
+		color:transparent;
+	}
+  }
+
+
+
+
+  @keyframes animation-6 { 
+	
+	0%{
+		transform: translateY(0);
+		animation-timing-function: ease-in-out;
+	}
+	  
+
+	18.75%, 20.5%{
+		transform: translateY(2.8em);
+		animation-timing-function: ease-in-out;
+	}
+
+	
+	37.5%, 100% {
+		transform:translatey(0);
+		animation-timing-function: ease-in-out;
+
+		background-image: conic-gradient(
+			#E5EB01 0deg 60deg,
+			#DE0223 60deg 120deg,
+			#E5EB01 120deg 180deg,
+			#DE0223 180deg 240deg,
+			#E5EB01 240deg 300deg,
+			#DE0223 300deg 360deg
+		);
+
+    	background-size: .5em .5em;
+    	background-color: var(--color-dunkinblue);
+		color:transparent;
+	}
+
+	
+  }
+
+  @keyframes animation-7 { 
+	
+	0%{
+		transform: translateY(0);
+		animation-timing-function: ease-in-out;
+	}
+	  
+
+	18.75%, 20.5%{
+		transform: translateY(2.8em);
+		animation-timing-function: ease-in-out;
+	}
+
+	
+	37.5%, 100% {
+		transform:translatey(0);
+		animation-timing-function: ease-in-out;
+    	background-color: white;
+		color:transparent;
+	}
+
+	
+  }
+
+  @keyframes animation-8 { 
+	
+	0%{
+		transform: translateY(0);
+		animation-timing-function: ease-in-out;
+	}
+	  
+	  
+
+	18.75%, 20.5%{
+		transform: translateY(2.8em);
+		animation-timing-function: ease-in-out;
+	}
+
+	
+	37.5%, 100% {
+		transform:translatey(0);
+		animation-timing-function: ease-in-out;
+    	background-color: #80086F;
+		color:transparent;
+	}
+
+	
+  }
+
+
+
+
+
+
+
+/* navigatie styling *******************************************************************************************************/
+
+body main nav{
+	background-color: #EE9B01;
+	height: 100vh;
+
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+
+	transform:translatex(100%);
+  	transition:transform .3s;
+}
+
+body main button{
+	background-color: transparent;
+	border: none;
+	position:absolute;
+ 	z-index:100;
+	top: 1.5em;
+	right: 1.5em;
+}
+
+body main button img{
+	max-width: 3em;
+	filter: invert(1);
+}
+
+body main nav h2{
+	writing-mode: vertical-lr;
+	background-color: #881A1D;
+	color: #fff;
+	padding: 1em;
+	letter-spacing: .5em;
+	margin-left: 2em;
+	position: relative;
+}
+
+body main nav h2::after {
+	content: "";
+	position: absolute;
+	top: 8.75em;
+	left: 1.5em;
+	transform: translateX(-50%);
+	border-width: 1.55em;
+	border-style: solid;
+	border-color: #881A1D transparent transparent transparent;
+  }
+
+body main nav ul{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	gap: 1em;
+	margin-top: 2em;
+
+}
+
+body main nav ul li{
+	list-style-type: none;
+}
+
+body main nav ul li a{
+	text-decoration: none;
+	color: #111;
+	margin-left: 2em;
+}
+
+body main nav ul li a:hover{
+	text-decoration: underline;
+	color: #111;
+}
+
+
+nav.menuOpen {
+	transform:translatex(0);
+  }
+
+
+  /* Media querie om de nav uit te klappen en responsive te maken */
+  @media (min-width:830px){
+	
+	main p, blockquote, h3{
+		font-size: 1em;
+	}
+	
+	main button{
+		display: none;
+	}
+
+	body main nav h2 {
+		margin-bottom: -4.75em;
+	  }
+
+	body main nav{
+		position:static;
+		transform: none;
+		height: 4em;
+		display: flex;
+	}
+
+	body main nav h2{
+		z-index: 1000;
+		overflow: visible;
+	}
+
+	body main nav ul{
+		flex-direction: row;
+		gap: .5em;
+		justify-content: space-around;
+		margin-right: 1em;
+		margin-top: 0;
+		top: 0;
+	}
+
+	body main nav ul li{
+		display: flex;
+		align-items: center;
+	}
+
+	body main nav ul li a{
+		text-align: center;
+	}
+
+	body main main{
+		margin-top: 3em;
+	}
+  }
+
+
+/* Styling van de main in de main (alles onder de nav)***************************************************************** */
+
+
+body main main{
+	margin-top: 6em;
+}
+
+/* padding voor alle sections behalve de neville brody section */
+main main section:not(section:nth-of-type(3)){
+	padding: 2em;
+}
+
+
+/* eerste p na de navigatie */
+main main > div:first-of-type p{
+	padding: 2em;
+}
+
+
+/* eerste section met rituals foto */
+main main > section:first-of-type{
+	display: grid;
+}
+
+main main > section:first-of-type img{
+	min-width: 17em;
+	max-width: 22em;
+	width: 100%;
+	border-radius: 50%;
+	justify-self: center;
+	margin-top: 1em;
+}
+
+
+
+/* tweede section met karakter en vormgeving */
+
+
+main main > div:nth-of-type(2){
+	display: grid;
+}
+
+main main > div:nth-of-type(2) > div{
+	padding-left: 2em;
+}
+
+main main > div:nth-of-type(2) p{
+	font-family: Insignia Roman, sans-serif;
+}
+
+
+/* letterkaart img */
+main main > div:nth-of-type(2) img{
+	width: 100%;
+	max-width: 22em;
+}
+
+
+
+
+
+/* Toepassingen en voorbeelden section */
+
+main main div:nth-of-type(2) section:nth-of-type(2) div figure img {
+	width: 8em;
+}
+
+main main div:nth-of-type(2) section:nth-of-type(2) div div{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+	grid-gap: .5em;
+	place-content: center;
+}
+
+
+
+/* probber het zelf section */
+main main > section:nth-of-type(2){
+	background-color: #111;
+	color: 	white;
+	height: 20em;
+	display: flex;
+	flex-direction: column;
+	place-content: center;
+}
+
+main main > section:nth-of-type(2) h2{
+	position: relative;
+	color: #111;
+	-webkit-text-stroke: .1px #fff;
+	text-transform: uppercase;
+}
+
+main main > section:nth-of-type(2) h2::before{
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	color: #ED9B00;
+	-webkit-text-stroke: 0vw #ED9B00;
+	border-right: 2px solid #ED9B00;
+	overflow: hidden;
+	animation: textanimation 6s linear infinite;
+}
+
+@keyframes textanimation{
+	0%, 10%, 100%{
+		width: 0;
+	}
+
+	70%, 90%{
+		width: 10em;
+	}
+}
+
+input{
+	width: 100%;
+	padding: 1em;
+	font-family: Insignia Roman, sans-serif;
+	font-size: larger;
+	color: white;
+	background-color: transparent;
+	border: white 2px solid;
+	border-left: transparent;
+	border-right: transparent;
+	margin-top: 1em;
+}
+
+
+
+
+/* neville brody section */
+
+main main > section:nth-of-type(3){
+	background-color: #E6E6E6;
+	position: relative;
+}
+
+main main > section:nth-of-type(3) img{
+	width: 100%;
+}
+
+/* h2 in de neville brody section onzichtbaar maken, maar wel leesbaar voor de screenreader */
+main main > section:nth-of-type(3) h2{
+	clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+main main > section:nth-of-type(3) div:nth-of-type(2){
+	display: grid;
+	gap: 1em;
+	padding: 2em;
+}
+
+
+/* animatie display font //////////////////////////////////////////////////////////////////////////////// */
+main main > div:nth-of-type(3){
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	white-space: nowrap;
+	position: relative;
+}
+
+main main > div:nth-of-type(3) div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 25%;
+	overflow: hidden;
+}
+
+main main > div:nth-of-type(3) div:nth-of-type(1), main main > div:nth-of-type(3) div:nth-of-type(3){
+	background-color: #EE9B01;
+	overflow: hidden;
+}
+
+main main > div:nth-of-type(3) div:nth-of-type(2), main main > div:nth-of-type(3) div:nth-of-type(4){
+	background-color: #881A1D;
+}
+
+main main > div:nth-of-type(3) div:nth-of-type(1) p, main main > div:nth-of-type(3) div:nth-of-type(3) p{
+	animation: flow 200s linear infinite;
+}
+
+main main > div:nth-of-type(3) div:nth-of-type(2) p, main main > div:nth-of-type(3) div:nth-of-type(4) p{
+	animation: flow2 200s linear infinite;
+	color: #F69AC2;
+}
+
+main main > div:nth-of-type(3) p{
+	font-size: clamp(2em, 6vw, 6em);
+	font-family: Insignia Roman, sans-serif;
+	white-space: nowrap;
+	overflow: hidden;
+
+}
+
+@keyframes flow {
+    0% {
+        transform: translateX(50%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes flow2 {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+
+
+/* 4 letter poster */
+
+main main > section:nth-of-type(4){
+	background-color: #111;
+	color: white;
+}
+
+main main > section:nth-of-type(4) p{
+	margin-bottom: 1em;
+}
+
+main main > section:nth-of-type(4) div:nth-of-type(2){
+	display: flex;
+	flex-wrap: wrap;
+	gap: .5em;
+}
+
+main main > section:nth-of-type(4) img{
+	width: 40%;
+	max-width: 15em;
+}
+
+
+
+/* Media queries voor responsiveness ********************************************************************************* */
+
+@media (min-width:840px){
+	main main h2{
+		font-weight: lighter;
+		font-size: 1.5em;
+	}
+
+
+	/* probeer het zelf section */
+	main main > section:nth-of-type(2){
+		height: 30em;
+	}
+
+	main main > section:nth-of-type(2) h2{
+		font-size: 2em;
+	}
+
+	input{
+		width: 100%;
+		padding: 1em;
+		font-family: Insignia Roman, sans-serif;
+		font-size: 3em;
+		color: white;
+		background-color: transparent;
+		border: white 2px solid;
+		border-left: transparent;
+		border-right: transparent;
+		margin-top: 1.5em;
+	}
+
+
+	/* poster section */
+	main main > section:nth-of-type(4){
+		background-color: #111;
+		color: white;
+		height: 100vh;
+	}
+
+	main main > section:nth-of-type(4) > div{
+		display: flex;
+		justify-content: center;
+		align-items: start;
+		border-left: #EAEAEA 4em solid;
+		padding-left: 2em;
+		width: 100%;
+	}
+
+	main main > section:nth-of-type(4) p{
+		margin-top: 1em;
+		margin-right: 1em;
+	}
+
+	main main > section:nth-of-type(4) div div{
+		width: 60%;
+		margin-top: 6em;
+
+	}
+
+	main main > section:nth-of-type(4) div:nth-of-type(2){
+		min-width: 15em;
+		max-width: 20em;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1em;
+	}
+}
+
+
+
+
+@media (min-width:975px){
+
+	/* eerste p na de nav */
+	main main > div:first-of-type{
+		display: flex;
+		place-content: center;
+	}
+
+	main main > div:first-of-type p{
+		width: 70%;
+	}
+
+	main main > section:first-of-type{
+		display: flex;
+		place-content: center;
+	}
+
+	main main > section:first-of-type > div{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 70%;
+	}
+
+	main main > section:first-of-type p{
+		width: 90%;
+		margin-right: 2em;
+	}
+
+
+	/* karakter en vormgeving section */
+
+	main main > div:nth-of-type(2){
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	main main > div:nth-of-type(2) section:nth-of-type(1){
+		display: flex;
+		align-items: center;
+	}
+
+	main main > div:nth-of-type(2) section:nth-of-type(1) > div{
+		display: flex;
+		width: 70%;
+	}
+
+	main main > div:nth-of-type(2) > div{
+		order: -100;
+		grid-row: span 2;
+		display: grid;
+		place-content: center;
+	}
+
+
+	/* voorbeelden en toepassingen section */
+
+	main main div:nth-of-type(2) section:nth-of-type(2) > div {
+		display: grid;
+	}
+
+	main main div:nth-of-type(2) section:nth-of-type(2) div div{
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
+		grid-gap: .5em;
+		max-width: 100%;
+		place-content: center;
+	}
+
+	figure{
+		width: fit-content;
+	}
+}
+
+
+
+
+@media (min-width:1280px){
+
+	/* Neville Brody */
+	main main > section:nth-of-type(3){
+		position: relative;
+	}
+
+	main main > section:nth-of-type(3) div:nth-of-type(2){
+		width: 50%;
+		height: 100%;
+		padding: 4em 2em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(255, 255, 255, 0.516);
+	}
+}
+
+
+
+/* scrollbar stylen (bron staat in de bronnenlijst) */
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+/* Bronnen */
+
+/* 
+1. https://developer.mozilla.org/en-US/
+2. https://alvarotrigo.com/blog/css-text-animations/ 
+3. https://css-tricks.com/snippets/css/complete-guide-grid/ 
+4. Codepen van Sanne
+5. https://www.youtube.com/watch?v=ccO2B40zkv4&ab_channel=OnlineTutorials 
+6. https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar 
+*/
+
